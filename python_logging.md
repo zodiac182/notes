@@ -1,29 +1,29 @@
-1.简单的将日志打印到屏幕
+# 1. 简单的将日志打印到屏幕
 
 
-import logging
+	import logging
 
-logging.debug('This is debug message')
-logging.info('This is info message')
-logging.warning('This is warning message')
+	logging.debug('This is debug message')
+	logging.info('This is info message')
+	logging.warning('This is warning message')
  
 *屏幕上打印:*WARNING:root:This is warning message
 默认情况下，logging将日志打印到屏幕，日志级别为WARNING；
 日志级别大小关系为：CRITICAL > ERROR > WARNING > INFO > DEBUG > NOTSET，当然也可以自己定义日志级别。
 
-2.通过logging.basicConfig函数对日志的输出格式及方式做相关配置
+# 2.通过logging.basicConfig函数对日志的输出格式及方式做相关配置
 
-import logging
+	import logging
 
-logging.basicConfig(level=logging.DEBUG,
- format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
- datefmt='%a, %d %b %Y %H:%M:%S',
- filename='myapp.log',
- filemode='w')
- 
-logging.debug('This is debug message')
-logging.info('This is info message')
-logging.warning('This is warning message')
+	logging.basicConfig(level=logging.DEBUG,
+	 format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+	 datefmt='%a, %d %b %Y %H:%M:%S',
+	 filename='myapp.log',
+	 filemode='w')
+	 
+	logging.debug('This is debug message')
+	logging.info('This is info message')
+	logging.warning('This is warning message')
  
 *./myapp.log文件中内容为:*
 Sun, 24 May 2009 21:48:54 demo2.py[line:11] DEBUG This is debug message
@@ -48,7 +48,7 @@ datefmt: 指定时间格式，同time.strftime()
 level: 设置日志级别，默认为logging.WARNING
 stream: 指定将日志的输出流，可以指定输出到sys.stderr,sys.stdout或者文件，默认输出到sys.stderr，当stream和filename同时指定时，stream被忽略
 
-3.将日志同时输出到文件和屏幕
+# 3.将日志同时输出到文件和屏幕
 
 import logging
 
@@ -78,7 +78,7 @@ root : WARNING This is warning message
 Sun, 24 May 2009 21:48:54 demo2.py[line:12] INFO This is info message
 Sun, 24 May 2009 21:48:54 demo2.py[line:13] WARNING This is warning message
 
-4.logging之日志回滚
+# 4.logging之日志回滚
 
 import logging
 from logging.handlers import RotatingFileHandler
@@ -111,7 +111,7 @@ logging.handlers.HTTPHandler: 通过"GET"或"POST"远程输出到HTTP服务器
 由于StreamHandler和FileHandler是常用的日志处理方式，所以直接包含在logging模块中，而其他方式则包含在logging.handlers模块中，
 上述其它处理方式的使用请参见python2.5手册！
 
-5.通过logging.config模块配置日志
+# 5.通过logging.config模块配置日志
 
 #logger.conf
 ###############################################
@@ -168,5 +168,5 @@ logger.debug('This is debug message')
 logger.info('This is info message')
 logger.warning('This is warning message')
 
-6.logging是线程安全的
+# 6.logging是线程安全的
 
