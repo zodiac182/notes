@@ -1,7 +1,7 @@
 # React
 
 ## 概念
-	React 是一个用于构建用户界面的库。  
+React 是一个用于构建用户界面的库。  
 ***
 ## React 特点
 * 声明式设计 −React采用声明范式，可以轻松描述应用。
@@ -17,6 +17,7 @@
 
 * 单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。
 ***
+## 使用
 ### 安装
 1. 安装nodejs
 2. 安装create-react-app,构建react开发环境  
@@ -27,21 +28,48 @@
 	npm start
 	```
 3. 目录结构  
-```
-my-app/
-  README.md
-  node_modules/
-  package.json
-  .gitignore
-  public/
-	favicon.ico
-	index.html
-	manifest.json
-  src/
-	App.css
-	App.js
-	App.test.js
-	index.css
-	index.js
-	logo.svg
-```
+	```
+	my-app/
+	  README.md
+	  node_modules/
+	  package.json
+	  .gitignore
+	  public/
+		favicon.ico
+		index.html
+		manifest.json
+	  src/
+		App.css
+		App.js
+		App.test.js
+		index.css
+		index.js
+		logo.svg
+	```
+### HTML模板
+* index.html网页源码
+	```
+	<!DOCTYPE html>
+	<html>
+	  <head>
+		<script src="../build/react.js"></script>
+		<script src="../build/react-dom.js"></script>
+		<script src="../build/browser.min.js"></script>
+	  </head>
+	  <body>
+		<div id="example"></div>
+		<script type="text/babel">
+		  // ** Our code goes here! **
+		</script>
+	  </body>
+	</html>
+	```
+	* <script> 标签的 type 属性为 text/babel 。React独有的JSX语法，跟JavaScript不兼容。凡是使用JSX的地方，都要加上type="text/babel"
+* ReactDOM.render()
+ReactDOM.render 是 React 的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点。
+	```
+	ReactDOM.render(
+	  <h1>Hello, world!</h1>,
+	  document.getElementById('example')
+	);
+	```
