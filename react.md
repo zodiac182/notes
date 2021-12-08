@@ -21,13 +21,13 @@
 1. 安装nodejs
 2. 安装create-react-app,构建react开发环境  
 ```
-		npm install -g create-react-app
-		create-react-app my-app
-		cd my-app/
-		npm start
+npm install -g create-react-app
+create-react-app my-app
+cd my-app/
+npm start
 ```
-3. 目录结构
-
+3. 目录结构  
+```
 	my-app/
 	  README.md
 	  node_modules/
@@ -44,3 +44,4 @@
 		index.css
 		index.js
 		logo.svg
+```
