@@ -46,7 +46,8 @@ vue cli用于快速搭建大型单页应用
 	$ vue init webpack vue-study
 
 方法2：Vite
-Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，可以实现闪电般的冷服务器启动。  
+Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，可以实现闪电般的冷服务器启动。
+
 	# 构建项目
 	$ npm init @vitejs/app <project-name> -- --template vue
 	$ cd <project-name>
