@@ -1,4 +1,4 @@
-#什么是node.js
+# 什么是node.js
 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。  
 Node 是一个让 JavaScript 运行在服务端的开发平台。Node是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。 
 node.js不是一门语言，不是库，不是框架，只是一个javeScript运行时环境。简单的就是node.js可以解析和执行javeScript代码，以前只有浏览器可以解析执行JaveScript代码，现在的javeScript可以完全脱离浏览器来运行   
@@ -8,12 +8,11 @@ node.js不是一门语言，不是库，不是框架，只是一个javeScript运
 * 允许用户从NPM服务器下载别人编写的第三方包到本地使用。
 * 允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。
 * 允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。
-
-*npm(包管理工具)是基于Node.js的前端项目包管理工具，是项目中对各种程序包的依赖管理，传统的开发项目主要是后端，现在技术在更新，前端有了框架的开发模式管理，也需要用包管理工具的思想去管理，目的是简化第三方程序包在项目中引用复杂化。前端的JS包是全世界JavaScript天才开发共享的各种代码模块，把这些代码模块都按照一个独立的软件功能统一在一个库中，一个代码模块是一个程序包（package，即代码模块）。它是世界上最大的软件注册表。
+* npm(包管理工具)是基于Node.js的前端项目包管理工具，是项目中对各种程序包的依赖管理，传统的开发项目主要是后端，现在技术在更新，前端有了框架的开发模式管理，也需要用包管理工具的思想去管理，目的是简化第三方程序包在项目中引用复杂化。前端的JS包是全世界JavaScript天才开发共享的各种代码模块，把这些代码模块都按照一个独立的软件功能统一在一个库中，一个代码模块是一个程序包（package，即代码模块）。它是世界上最大的软件注册表。
 	* 官网：　https://www.npmjs.cn/  
 
 
-nodejs是一个服务js平台，有自身带的npm（基于 Node.js的前端项目包管理工具），有第三方的grunt（基于Node.js的前端项目构建工具即即脚手架）、有第三方的express（路由功能）等强大的代码与项目管理应用。还有自身带的webpack（基于 Node.js的前端项目部署打包工具），v8（谷歌客户端浏览器javascript引擎）等强大的功能。  
+* nodejs是一个服务js平台，有自身带的npm（基于 Node.js的前端项目包管理工具），有第三方的grunt（基于Node.js的前端项目构建工具即即脚手架）、有第三方的express（路由功能）等强大的代码与项目管理应用。还有自身带的webpack（基于 Node.js的前端项目部署打包工具），v8（谷歌客户端浏览器javascript引擎）等强大的功能。  
 grunt是基于Node.js的前端Javascript语言项目构建工具，即脚手架。一句话：构建项目自动化。对于需要反复重复的任务，例如压缩（minification）、编译、单元测试、linting等，自动化工具可以减轻你的劳动，简化你的工作。当你在 Gruntfile 文件正确配置好了任务，任务运行器就会自动帮你或你的小组完成大部分无聊的工作。  
 官网：https://www.gruntjs.net/  
 
@@ -35,8 +34,8 @@ Vue Router 是 Vue.js 的官方路由。它与 Vue.js 核心深度集成，让�
 ### 安装
 	cnpm install vue@next
 ### 初始化一个项目
-#### 命令行工具vue cli
-vue cli用于快读搭建大型单页应用
+#### 1. 命令行工具vue cli
+vue cli用于快速搭建大型单页应用  
 	# 安装vue cli
 	$ cnpm install -g @vue/cli
 	# 安装 @vue/cli-int：
@@ -44,8 +43,8 @@ vue cli用于快读搭建大型单页应用
 	# 创建vue 项目
 	$ vue init webpack vue-study
 
-#### Vite
-Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，可以实现闪电般的冷服务器启动。
+#### 2. Vite
+Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，可以实现闪电般的冷服务器启动。  
 	# 构建项目
 	$ npm init @vitejs/app <project-name> -- --template vue
 	$ cd <project-name>
@@ -60,7 +59,7 @@ Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，
 	  > Local: http://localhost:3000/
 	  > Network: use `--host` to expose
 ##### 解决方法：
-* 修改vite.config.js：
+* 1. 修改vite.config.js：
 	import vue from '@vitejs/plugin-vue'
 	/**
 	 * https://vitejs.dev/config/
@@ -72,9 +71,9 @@ Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，
 		host: '0.0.0.0'	// ← 新增内容 ←
 	  }						// ← ← ← ← ← ←
 	}
-* 通过 Vite CLI 配置
+* 2. 通过 Vite CLI 配置
 	执行命令： npx vite --host 0.0.0.0
-* 修改npm脚本
+* 3. 修改npm脚本
 	修改 package.json 文件中 scripts 节点下的脚本，如下：
 	"scripts": {
 	  "dev": "vite --host 0.0.0.0",
