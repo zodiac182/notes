@@ -66,23 +66,22 @@ React 是一个用于构建用户界面的库。
 	```
 	* <script> 标签的 type 属性为 text/babel。
 	* React独有的JSX语法，跟JavaScript不兼容。凡是使用JSX的地方，都要加上type="text/babel"
-	* JSX 语法  
+	* JSX 语法：  
 	HTML语言直接写在JavaScript语言之中，不加任何引号，这就是JSX的语法，它允许HTML与JavaScript的混写  
 	遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析  
-	```
-	var names = ['Alice', 'Emily', 'Kate'];
-	ReactDOM.render(
-	  <div>
-	  {
-		names.map(function (name) {
-		  return <div>Hello, {name}!</div>
-		})
-	  }
-	  </div>,
-	  document.getElementById('example')
-	);
-	```
-	
+		```
+		var names = ['Alice', 'Emily', 'Kate'];
+		ReactDOM.render(
+		  <div>
+		  {
+			names.map(function (name) {
+			  return <div>Hello, {name}!</div>
+			})
+		  }
+		  </div>,
+		  document.getElementById('example')
+		);
+		```
 * ReactDOM.render()
 ReactDOM.render 是 React 的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点。
 	```
