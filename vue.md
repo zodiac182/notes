@@ -63,8 +63,7 @@ Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，
 
 	  > Local: http://localhost:3000/
 	  > Network: use `--host` to expose
-###### 解决方法：
-####### 解决方法1： 修改vite.config.js:
+###### 解决方法1： 修改vite.config.js:
 	import vue from '@vitejs/plugin-vue'
 	/**
 	 * https://vitejs.dev/config/
@@ -76,9 +75,9 @@ Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，
 		host: '0.0.0.0'	// ← 新增内容 ←
 	  }						// ← ← ← ← ← ←
 	}
-####### 解决方法2： 通过 Vite CLI 配置
+###### 解决方法2： 通过 Vite CLI 配置
 	执行命令： npx vite --host 0.0.0.0
-####### 解决方法3： 修改npm脚本
+###### 解决方法3： 修改npm脚本
 	# 修改 package.json 文件中 scripts 节点下的脚本，如下：  
 	"scripts": {
 	  "dev": "vite --host 0.0.0.0",
