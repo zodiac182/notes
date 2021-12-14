@@ -36,9 +36,8 @@ Vue Router 是 Vue.js 的官方路由。它与 Vue.js 核心深度集成，让�
 ### 2.1 安装
 	cnpm install vue@next
 ### 2.2 初始化一个项目
-* 命令行工具vue cli
+方法1：命令行工具vue cli
 vue cli用于快速搭建大型单页应用
-	
 	# 安装vue cli
 	$ cnpm install -g @vue/cli
 	# 安装 @vue/cli-int：
@@ -46,9 +45,8 @@ vue cli用于快速搭建大型单页应用
 	# 创建vue 项目
 	$ vue init webpack vue-study
 
-* Vite
+方法2：Vite
 Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，可以实现闪电般的冷服务器启动。  
-	
 	# 构建项目
 	$ npm init @vitejs/app <project-name> -- --template vue
 	$ cd <project-name>
@@ -63,8 +61,7 @@ Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，
 	  > Local: http://localhost:3000/
 	  > Network: use `--host` to expose
 ###### 解决方法：
-* 1. 修改vite.config.js：  
-
+1. 修改vite.config.js：
 	import vue from '@vitejs/plugin-vue'
 	/**
 	 * https://vitejs.dev/config/
@@ -76,11 +73,9 @@ Vite 是一个 web 开发构建工具，由于其原生 ES 模块导入方式，
 		host: '0.0.0.0'	// ← 新增内容 ←
 	  }						// ← ← ← ← ← ←
 	}
-* 2. 通过 Vite CLI 配置  
-
+2. 通过 Vite CLI 配置  
 	执行命令： npx vite --host 0.0.0.0
-* 3. 修改npm脚本
-
+3. 修改npm脚本
 	# 修改 package.json 文件中 scripts 节点下的脚本，如下：  
 	"scripts": {
 	  "dev": "vite --host 0.0.0.0",
